@@ -12,7 +12,7 @@ MIN_PORT=100
 MAX_PORT=65520
 MIN_HOPPING_PORT=10000
 MAX_HOPPING_PORT=65535
-TLS_SERVER_DEFAULT=shonenjump.com
+TLS_SERVER_DEFAULT=opgg-static.akamaized.net
 PROTOCOL_LIST=("XTLS + reality + Viosion" "hysteria2" "tuic" "ShadowTLS" "shadowsocks" "trojan" "vmess + ws" "vless + ws + tls" "H2 + reality" "gRPC + reality")
 NODE_TAG=("xtls-reality-vision" "hysteria2" "tuic" "ShadowTLS" "shadowsocks" "trojan" "vmess-ws" "vless-ws-tls" "h2-reality" "grpc-reality")
 CONSECUTIVE_PORTS=${#PROTOCOL_LIST[@]}
@@ -2549,7 +2549,7 @@ create_shortcut() {
   cat > ${WORK_DIR}/sb.sh << EOF
 #!/usr/bin/env bash
 
-bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/shenmeshenmedadi/SB-pr/refs/heads/patch-1.1/sing-box.sh) \$1
+bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/shenmeshenmedadi/SB-pr/refs/heads/main-1.1/sing-box.sh) \$1
 EOF
   chmod +x ${WORK_DIR}/sb.sh
   ln -sf ${WORK_DIR}/sb.sh /usr/bin/sb
